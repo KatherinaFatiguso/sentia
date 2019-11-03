@@ -1,6 +1,6 @@
 class Location < ApplicationRecord
   require 'csv'
-  belongs_to :person
+  # belongs_to :person
 
   def self.import
     csv_file = File.read('data/csv_sheet1.csv')
@@ -17,9 +17,9 @@ class Location < ApplicationRecord
     # puts table.by_col[1]
     loc = table.by_col[1]
     loc.each do |row|
-      # puts row
+      # puts row.titlecase
       self.find_or_create_by!(
-        name: row
+        name: row.titlecase
       )
     end
   end
