@@ -1,6 +1,6 @@
 class Affiliation < ApplicationRecord
   require 'csv'
-  belongs_to :person
+  has_many :people
   def self.import
     table = CSV.parse(File.read('data/csv_sheet1.csv'), headers: true)
     # puts table.by_col[4]

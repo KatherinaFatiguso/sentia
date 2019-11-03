@@ -1,6 +1,6 @@
 class Location < ApplicationRecord
   require 'csv'
-  belongs_to :person
+  has_many :people
 
   def self.import
     csv_file = File.read('data/csv_sheet1.csv')
