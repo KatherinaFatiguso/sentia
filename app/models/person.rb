@@ -2,23 +2,14 @@ class Person < ApplicationRecord
   require 'csv'
   validates :first_name, :locations, :species, :gender, :affiliations, presence: true
 
-  # has_many :locations
   belongs_to :affiliation, optional: true
   belongs_to :location, optional: true
 
 
   def self.import
     table = CSV.parse(File.read('data/csv_sheet1.csv'), headers: true)
-    # loc = table.by_row[0]
-    # puts table.count
-    # puts table.by_row[0]
-    # table.each do |0..table.count-1|
-    #   puts row.by_row[]
-    #
-    # end
     size = table.count-1
     for i in 0..size do
-      # puts "OOOOOOOOOOO"
       if !table.by_row[i]["Affiliations"].nil? # Only add Person with Affiliation
         location = Location.find_by(name: table.by_row[i]["Location"].titlecase)
         affiliation = Affiliation.find_by(name: table.by_row[i]["Affiliations"])
