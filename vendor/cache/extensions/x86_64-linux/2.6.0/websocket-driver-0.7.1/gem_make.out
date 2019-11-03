@@ -1,0 +1,15 @@
+current directory: /home/katherina/sentia/starwars/vendor/cache/gems/websocket-driver-0.7.1/ext/websocket-driver
+/home/katherina/.rvm/rubies/ruby-2.6.5/bin/ruby -I /home/katherina/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20191103-26601-1u7qb35.rb extconf.rb
+creating Makefile
+
+current directory: /home/katherina/sentia/starwars/vendor/cache/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/katherina/sentia/starwars/vendor/cache/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/katherina/sentia/starwars/vendor/cache/gems/websocket-driver-0.7.1/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -m 0755 websocket_mask.so ./.gem.20191103-26601-16ld2qo

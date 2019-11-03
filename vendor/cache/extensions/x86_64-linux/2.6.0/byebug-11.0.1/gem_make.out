@@ -1,0 +1,19 @@
+current directory: /home/katherina/sentia/starwars/vendor/cache/gems/byebug-11.0.1/ext/byebug
+/home/katherina/.rvm/rubies/ruby-2.6.5/bin/ruby -I /home/katherina/.rvm/rubies/ruby-2.6.5/lib/ruby/site_ruby/2.6.0 -r ./siteconf20191103-26601-r7h4jk.rb extconf.rb
+creating Makefile
+
+current directory: /home/katherina/sentia/starwars/vendor/cache/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/katherina/sentia/starwars/vendor/cache/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/katherina/sentia/starwars/vendor/cache/gems/byebug-11.0.1/ext/byebug
+make "DESTDIR=" install
+/usr/bin/install -m 0755 byebug.so ./.gem.20191103-26601-177dptx/byebug
