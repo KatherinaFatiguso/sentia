@@ -32,4 +32,8 @@ class Person < ApplicationRecord
     end
   end
 
+  def self.search(search)
+    where("affiliations ILIKE ?", "%#{search}%")
+  end
+
 end

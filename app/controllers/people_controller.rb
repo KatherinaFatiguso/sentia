@@ -5,8 +5,11 @@ class PeopleController < ApplicationController
   # GET /people
   # GET /people.json
   def index
-    # @people = Person.all
-    @people = Person.paginate(:page => params[:page], :per_page => 10).order(sort_column + " " + sort_direction)
+    if params[:search]
+      @people = Person.search(params[:search]).paginate(:page => params[:page], :per_page => 10).order("created_at DESC")
+    else
+      @people = Person.paginate(:page => params[:page], :per_page => 10).order(sort_column + " " + sort_direction)
+    end
   end
 
   # GET /people/1
