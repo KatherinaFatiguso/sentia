@@ -5,6 +5,8 @@ class Person < ApplicationRecord
   belongs_to :affiliation, optional: true
   belongs_to :location, optional: true
 
+  # set per_page globally
+  WillPaginate.per_page = 10
 
   def self.import
     table = CSV.parse(File.read('data/csv_sheet1.csv'), headers: true)
